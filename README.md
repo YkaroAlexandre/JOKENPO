@@ -1,2 +1,2 @@
 # JOKENPO
- Joguinho JOKENPO feito em python, bem básico, sem interface gráfica
+ Joguinho JOKENPO feito em python, bem básico, sem interface gráfica.
