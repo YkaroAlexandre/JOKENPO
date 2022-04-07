@@ -6,15 +6,19 @@ print("\033[1;33m-="*5, "Bom dia, seja bem vindo(a) ao nosso desafio!", "-="*5)
 print()
 print("          Jogue conosco um Jokenpô e se divirta bastante.")
 print()
+
 contador_vitorias = 0
 contador_derrotas = 0
 contador_empates = 0
+
 resposta = True
 while resposta:
-    lista_de_jogadas = ["PEDRA", "PAPEL", "TESOURA"] # Lista de opções do computador.
+    # Lista de opções do computador.
+    lista_de_jogadas = ["PEDRA", "PAPEL", "TESOURA"] 
     computador = random.choice(lista_de_jogadas)
     print('\033[1;33m-=\033[m' * 33)
-    jogador = input("\033[4;35mEscolha: PEDRA, PAPEL ou TESOURA -\033[m ").upper().strip() #Escolha do jogador.
+    #Escolha do jogador.
+    jogador = input("\033[4;35mEscolha: PEDRA, PAPEL ou TESOURA -\033[m ").upper().strip() 
     
     while jogador not in lista_de_jogadas:
         print("Opção inválida. Tente novamente.")
@@ -26,7 +30,7 @@ while resposta:
     sleep(1)
     print("\033[1;32mPÔ")
     sleep(1)
-
+    # Analise para saber quem venceu.
     if jogador == computador:
         print("\033[1;34mVocês escolheram o mesmo.")
         contador_empates += 1
@@ -54,7 +58,7 @@ while resposta:
         elif computador == 'PAPEL':
             print("\033[4;1;32mVocê ganhou!!\033[m\n\033[1;32mParabéns, você escolheu {} e o computador {}.".format(jogador, computador))
             contador_vitorias += 1
-
+    # Para saber se ainda quer continuar jogando ou não.
     lista_de_resposta = ['S','N']
     r = ''
     while r not in lista_de_resposta:
@@ -64,6 +68,7 @@ while resposta:
         elif r == 'S':
             break
 print('\033[1;33m-=\033[m' * 33)
+# Contadores de vitorias, derrotas e empates.
 if contador_vitorias != 0:
     print(f'\033[1;32mVocê venceu {contador_vitorias} vezes.\033[m')
 if contador_derrotas != 0:
