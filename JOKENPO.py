@@ -13,10 +13,12 @@ contador_empates = 0
 
 resposta = True
 while resposta:
+    
     # Lista de opções do computador.
     lista_de_jogadas = ["PEDRA", "PAPEL", "TESOURA"] 
     computador = random.choice(lista_de_jogadas)
     print('\033[1;33m-=\033[m' * 33)
+
     #Escolha do jogador.
     jogador = input("\033[4;35mEscolha: PEDRA, PAPEL ou TESOURA -\033[m ").upper().strip() 
     
@@ -30,6 +32,7 @@ while resposta:
     sleep(1)
     print("\033[1;32mPÔ")
     sleep(1)
+
     # Analise para saber quem venceu.
     if jogador == computador:
         print("\033[1;34mVocês escolheram o mesmo.")
@@ -58,6 +61,7 @@ while resposta:
         elif computador == 'PAPEL':
             print("\033[4;1;32mVocê ganhou!!\033[m\n\033[1;32mParabéns, você escolheu {} e o computador {}.".format(jogador, computador))
             contador_vitorias += 1
+
     # Para saber se ainda quer continuar jogando ou não.
     lista_de_resposta = ['S','N']
     r = ''
@@ -68,6 +72,7 @@ while resposta:
         elif r == 'S':
             break
 print('\033[1;33m-=\033[m' * 33)
+
 # Contadores de vitorias, derrotas e empates.
 if contador_vitorias != 0:
     print(f'\033[1;32mVocê venceu {contador_vitorias} vezes.\033[m')
