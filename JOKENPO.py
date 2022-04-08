@@ -1,6 +1,5 @@
 import random
 from time import sleep
-from turtle import Turtle
 
 print("\033[1;33m-="*5, "Bom dia, seja bem vindo(a) ao nosso desafio!", "-="*5)
 print()
@@ -26,12 +25,14 @@ while resposta:
         print("Opção inválida. Tente novamente.")
         jogador = input("\033[4;35mEscolha: PEDRA, PAPEL ou TESOURA -\033[m ").upper().strip()
         
+    print()
     print("\033[1;31mJO")
     sleep(1)
     print("\033[1;34mKEN")
     sleep(1)
     print("\033[1;32mPÔ")
     sleep(1)
+    print()
 
     # Analise para saber quem venceu.
     if jogador == computador:
