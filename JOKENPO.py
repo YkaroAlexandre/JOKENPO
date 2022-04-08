@@ -24,7 +24,7 @@ while resposta:
     while jogador not in lista_de_jogadas:
         print("Opção inválida. Tente novamente.")
         jogador = input("\033[4;35mEscolha: PEDRA, PAPEL ou TESOURA -\033[m ").upper().strip()
-        
+
     print()
     print("\033[1;31mJO")
     sleep(1)
